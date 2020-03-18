@@ -1,0 +1,24 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: shell
+    image: archlinux/base:latest
+    dockerfile: Dockerfile.j2
+    pull: false
+    pre_build_image: false
+provisioner:
+  name: ansible
+verifier:
+  name: ansible
+scenario:
+  name: default
+  test_sequence:
+    - destroy
+    - create
+    - converge
+    # - idempotence
+    - lint
+    - verify

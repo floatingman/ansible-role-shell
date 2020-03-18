@@ -1,5 +1,10 @@
 ---
 # tasks file for ansible-role-shell
+- name: Ensure local_bin_dir is present
+  file:
+    path: "{{ local_bin_dir }}"
+    state: directory
+
 - name: Ensure ~/.shell exists
   file:
     path: ~/.shell
@@ -45,6 +50,12 @@
     clone: true
     repo: https://github.com/romkatv/powerlevel10k.git
     dest: ~/.shell/powerlevel10k
+
+- name: Download diff-so-fancy
+  get_url:
+    url: https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy
+    dest: "{{ local_bin_dir }}"
+    mode: "+x"
 
 - name: Download fzf
   git:
