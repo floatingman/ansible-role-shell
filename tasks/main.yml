@@ -1,0 +1,58 @@
+---
+# tasks file for ansible-role-shell
+- name: Ensure ~/.shell exists
+  file:
+    path: ~/.shell
+    state: directory
+- name: Install fzf-tab
+  git:
+    clone: true
+    repo: https://github.com/Aloxaf/fzf-tab
+    dest: ~/.shell/fzf-tab
+
+- name: Install fzf-autosuggestions
+  git:
+    clone: true
+    repo: https://github.com/zsh-users/zsh-autosuggestions
+    dest: ~/.shell/zsh-autosuggestions
+
+- name: Install zsh-syntax-highlighting
+  git:
+    clone: true
+    repo: https://github.com/zsh-users/zsh-syntax-highlighting
+    dest: ~/.shell/zsh-syntax-highlighting
+
+- name: Install zsh-history-substring-search
+  git:
+    clone: true
+    repo: https://github.com/zsh-users/zsh-history-substring-search
+    dest: ~/.shell/zsh-history-substring-search
+
+- name: Install zsh-completions
+  git:
+    clone: true
+    repo: https://github.com/zsh-users/zsh-completions
+    dest: ~/.shell/zsh-completions
+
+- name: Install bash-my-aws
+  git:
+    clone: true
+    repo: https://github.com/bash-my-aws/bash-my-aws.git
+    dest: ~/.shell/bash-my-aws
+
+- name: Install powerlevel10k
+  git:
+    clone: true
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: ~/.shell/powerlevel10k
+
+- name: Download fzf
+  git:
+    clone: true
+    repo: https://github.com/junegunn/fzf.git
+    dest: ~/.fzf
+
+- name: Install fzf
+  command: ./install
+  args:
+    chdir: ~/.fzf
