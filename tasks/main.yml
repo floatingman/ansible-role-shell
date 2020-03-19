@@ -96,4 +96,4 @@
     src: files/init.vim
 
 - name: Install Vim plugins
-  shell: vim +PlugInstall +qall > /dev/null
+  shell: nvim +PlugInstall +qall > /dev/null
