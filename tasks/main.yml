@@ -103,3 +103,13 @@
   copy:
     dest: ~/.config/nvim/init.vim
     src: files/init.vim
+
+- name: Clean up default dotfiles
+  file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - .bash_logout
+    - .bash_profile
+    - .bashrc
+    - .zshrc
