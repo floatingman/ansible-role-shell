@@ -68,14 +68,14 @@
   args:
     chdir: ~/.fzf
 
-- name: Check if dotfile folder exist
-  stat:
-    path: ~/.dotfiles
-  register: dot
+#- name: Check if dotfile folder exist
+#  stat:
+#    path: ~/.dotfiles
+#  register: dot
 
-- name: RCM
-  shell: rcup -t cli
-  when: dot.stat.isdir is defined and dot.stat.isdir
+#- name: RCM
+#  shell: rcup -t cli
+#  when: dot.stat.isdir is defined and dot.stat.isdir
 
 - name: Create Vim folders
   file:
@@ -103,6 +103,3 @@
   copy:
     dest: ~/.config/nvim/init.vim
     src: files/init.vim
-
-- name: Install Vim plugins
-  shell: nvim +PlugInstall
