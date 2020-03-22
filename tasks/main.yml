@@ -60,7 +60,7 @@
 - name: Download mgitstatus
   get_url:
     url: https://raw.githubusercontent.com/fboender/multi-git-status/master/mgitstatus
-    dest: "{{ local_bin_dir }}"
+    dest: "{{ local_bin_dir }}/mgst"
     mode: "+x"
 
 - name: Download fzf
