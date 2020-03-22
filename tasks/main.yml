@@ -57,6 +57,12 @@
     dest: "{{ local_bin_dir }}"
     mode: "+x"
 
+- name: Download mgitstatus
+  get_url:
+    url: https://raw.githubusercontent.com/fboender/multi-git-status/master/mgitstatus
+    dest: "{{ local_bin_dir }}"
+    mode: "+x"
+
 - name: Download fzf
   git:
     clone: true
