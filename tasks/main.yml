@@ -9,6 +9,19 @@
   file:
     path: ~/.shell
     state: directory
+
+- name: Download kubectx
+  get_url:
+    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx
+    dest: "{{ local_bin_dir }}"
+    mode: "+x"
+
+- name: Download kubens
+  get_url:
+    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens
+    dest: "{{ local_bin_dir }}"
+    mode: "+x"
+
 - name: Install fzf-tab
   git:
     clone: true
@@ -73,6 +86,16 @@
   command: ./install
   args:
     chdir: ~/.fzf
+
+- name: Download kubectx completion
+  get_url:
+    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubens.zsh
+    dest: ~/.shell/zsh-completions/src/
+
+- name: Download kubens completion
+  get_url:
+    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubectx.zsh
+    dest: ~/.shell/zsh-completions/src/
 
 - name: Create Vim folders
   file:
