@@ -22,6 +22,11 @@
     dest: "{{ local_bin_dir }}"
     mode: "+x"
 
+- name: Download kubectl aliases
+  get_url:
+    url: https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases
+    dest: ~/.shell/kubectl_aliases
+
 - name: Install fzf-tab
   git:
     clone: true
