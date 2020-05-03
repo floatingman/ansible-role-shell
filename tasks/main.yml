@@ -27,6 +27,17 @@
     url: https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases
     dest: ~/.shell/kubectl_aliases
 
+- name: Download fzf
+  git:
+    clone: true
+    repo: https://github.com/junegunn/fzf.git
+    dest: ~/.fzf
+
+- name: Install fzf
+  command: ./install
+  args:
+    chdir: ~/.fzf
+
 - name: Install fzf-tab
   git:
     clone: true
@@ -81,26 +92,13 @@
     dest: "{{ local_bin_dir }}/mgst"
     mode: "+x"
 
-- name: Download fzf
-  git:
-    clone: true
-    repo: https://github.com/junegunn/fzf.git
-    dest: ~/.fzf
+- name: Ensure SDKMAN folder exists
+  file:
+    path: ~/.local/sdkman
+    state: directory
 
-- name: Install fzf
-  command: ./install
-  args:
-    chdir: ~/.fzf
-
-- name: Download kubectx completion
-  get_url:
-    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubens.zsh
-    dest: ~/.shell/zsh-completions/src/
-
-- name: Download kubens completion
-  get_url:
-    url: https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/kubectx.zsh
-    dest: ~/.shell/zsh-completions/src/
+- name: Install SDKMAN
+  command: export SDKMAN_DIR="~/.local/sdkman" && curl -s "https://get.sdkman.io?rcupdate=false" | bash
 
 - name: Create Vim folders
   file:

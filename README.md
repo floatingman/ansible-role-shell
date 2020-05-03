@@ -1,38 +1,58 @@
-Role Name
+ansible-role-shell
 =========
 
-A brief description of the role goes here.
+This roles configures my prefered settings for working with the shell on Linux based systems.
+
+- Install kubectx
+- Install kubectx
+- Install kubectl-aliases
+- Install fzf
+- Install fzf-tab
+- Install fzf-autosuggestions
+- Install zsh-syntax-highlightning
+- Install zsh-history-substring-search
+- Install zsh-completions
+- Install bash-my-aws
+- Install Powerlevel10k
+- Install diff-so-facy
+- Install multi-git-status
+- Install SDKMAN
+- Setup NeoVim 
+
+This works best with my [dotfiles](https://github.com/Allaman/dotfiles) and 
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Git should be installed on the target system.
 
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+| Variable| Description | default |
+|---------|-------------|---------|
+| local_bin_dir | path of folder for user only executables | ~/.local/bin |
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+No dependencies
 
 Example Playbook
 ----------------
 
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```
+---
+- name: Playbook
+  hosts: localhost
+  connection: local
+  roles:
+    - ansible-role-shell
+```
 
 License
 -------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+MIT
