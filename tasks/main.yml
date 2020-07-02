@@ -98,7 +98,7 @@
     state: directory
 
 - name: Install SDKMAN
-  command: export SDKMAN_DIR="~/.local/sdkman" && curl -s "https://get.sdkman.io?rcupdate=false" | bash
+  shell: export SDKMAN_DIR="~/.local/sdkman" && curl -s "https://get.sdkman.io?rcupdate=false" | bash
 
 - name: Create Vim folders
   file:
