@@ -132,9 +132,9 @@
     src: files/ssh-agent.service
     dest: $HOME/.config/systemd/user/ssh-agent.service
 
-- name: Enable ssh-aget service
+- name: Enable ssh-agent service
   systemd:
-    name: ssh-add
+    name: ssh-agent
     enabled: yes
     state: started
     scope: user
