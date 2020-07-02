@@ -136,5 +136,5 @@
   systemd:
     name: ssh-add
     enabled: yes
-    started: yes
+    state: started
     scope: user
