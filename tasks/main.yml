@@ -126,3 +126,15 @@
   copy:
     dest: ~/.config/nvim/init.vim
     src: files/init.vim
+
+- name: Create ssh-add user service
+  copy:
+    src: files/ssh-agent.service
+    dest: $HOME/.config/systemd/user/ssh-agent.service
+
+- name: Enable ssh-aget service
+  systemd:
+    name: ssh-add
+    enabled: yes
+    started: yes
+    scope: user

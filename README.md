@@ -3,7 +3,7 @@ ansible-role-shell
 
 This roles configures my prefered settings for working with the shell on Linux based systems.
 
-- Install kubectx
+- Install kubens
 - Install kubectx
 - Install kubectl-aliases
 - Install fzf
@@ -18,8 +18,9 @@ This roles configures my prefered settings for working with the shell on Linux b
 - Install multi-git-status
 - Install SDKMAN
 - Setup NeoVim 
+- Setup ssh-agent user service
 
-This works best with my [dotfiles](https://github.com/Allaman/dotfiles) and 
+This works best with my [dotfiles](https://github.com/Allaman/dotfiles) and my [ansible role](https://github.com/Allaman/ansible-role-dotfiles)
 
 Requirements
 ------------
