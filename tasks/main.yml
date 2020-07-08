@@ -139,3 +139,4 @@
     enabled: yes
     state: started
     scope: user
+  when: ansible_service_mgr == "systemd"
