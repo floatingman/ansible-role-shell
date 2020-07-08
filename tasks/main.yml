@@ -92,11 +92,6 @@
     dest: "{{ local_bin_dir }}/mgst"
     mode: "+x"
 
-- name: Ensure SDKMAN folder exists
-  file:
-    path: "{{ ansible_env.HOME }}/.local/sdkman"
-    state: directory
-
 - name: Install SDKMAN
   shell: export SDKMAN_DIR="{{ ansible_env.HOME }}/.local/sdkman" && curl -s "https://get.sdkman.io?rcupdate=false" | bash
   args:
