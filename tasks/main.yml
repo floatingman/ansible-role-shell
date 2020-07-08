@@ -99,8 +99,8 @@
 
 - name: Install SDKMAN
   shell: export SDKMAN_DIR="{{ ansible_env.HOME }}/.local/sdkman" && curl -s "https://get.sdkman.io?rcupdate=false" | bash
-    args:
-      executable: /bin/bash
+  args:
+    executable: /bin/bash
 
 - name: Create Vim folders
   file:
