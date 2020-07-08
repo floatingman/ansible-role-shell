@@ -131,6 +131,7 @@
   copy:
     src: files/ssh-agent.service
     dest: $HOME/.config/systemd/user/ssh-agent.service
+  when: ansible_service_mgr == "systemd"
 
 - name: Enable ssh-agent service
   systemd:
