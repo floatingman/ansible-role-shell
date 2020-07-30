@@ -123,17 +123,3 @@
   copy:
     dest: ~/.config/nvim/init.vim
     src: files/init.vim
-
-- name: Create ssh-add user service
-  copy:
-    src: files/ssh-agent.service
-    dest: $HOME/.config/systemd/user/ssh-agent.service
-  when: ansible_service_mgr == "systemd"
-
-- name: Enable ssh-agent service
-  systemd:
-    name: ssh-agent
-    enabled: yes
-    state: started
-    scope: user
-  when: ansible_service_mgr == "systemd"
