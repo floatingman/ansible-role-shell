@@ -3,8 +3,6 @@ ansible-role-shell
 
 This roles configures my prefered settings for working with the shell on Linux based systems.
 
-- Install kubens
-- Install kubectx
 - Install kubectl-aliases
 - Install fzf
 - Install fzf-tab
@@ -14,11 +12,7 @@ This roles configures my prefered settings for working with the shell on Linux b
 - Install zsh-completions
 - Install bash-my-aws
 - Install Powerlevel10k
-- Install diff-so-facy
-- Install multi-git-status
-- Install SDKMAN
 - Setup NeoVim 
-- Setup ssh-agent user service
 
 This works best with my [dotfiles](https://github.com/Allaman/dotfiles) and my [ansible role](https://github.com/Allaman/ansible-role-dotfiles)
 
@@ -30,9 +24,7 @@ Git should be installed on the target system.
 Role Variables
 --------------
 
-| Variable| Description | default |
-|---------|-------------|---------|
-| local_bin_dir | path of folder for user only executables | ~/.local/bin |
+No variables
 
 Dependencies
 ------------

@@ -1,3 +1,2 @@
 ---
 # defaults file for ansible-role-shell
-local_bin_dir: "~/.local/bin/"
