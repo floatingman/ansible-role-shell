@@ -12,14 +12,12 @@ This roles configures my prefered settings for working with the shell on Linux b
 - Install zsh-completions
 - Install bash-my-aws
 - Install Powerlevel10k
-- Setup NeoVim 
+- Setup NeoVim
 
 This works best with my [dotfiles](https://github.com/Allaman/dotfiles) and my [ansible role](https://github.com/Allaman/ansible-role-dotfiles)
 
 Requirements
 ------------
-
-Git should be installed on the target system.
 
 Role Variables
 --------------
@@ -29,7 +27,7 @@ No variables
 Dependencies
 ------------
 
-No dependencies
+- ansible-role-basic
 
 Example Playbook
 ----------------
