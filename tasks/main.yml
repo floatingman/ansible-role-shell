@@ -5,6 +5,18 @@
     path: ~/.shell
     state: directory
 
+- name: Clone oh-my-tmux
+  git:
+    clone: true
+    repo: https://github.com/gpakosz/.tmux.git
+    dest: ~/.tmux
+
+- name: Symlink oh-my-tmux
+  file:
+    src: ~/.tmux/.tmux.conf
+    dest: ~/.tmux.conf
+    state: link
+
 - name: Download kubectl aliases
   get_url:
     url: https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases

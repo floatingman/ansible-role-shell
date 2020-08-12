@@ -13,6 +13,7 @@ This roles configures my prefered settings for working with the shell on Linux b
 - Install bash-my-aws
 - Install Powerlevel10k
 - Setup NeoVim
+- Setup oh-my-tmux
 
 This works best with my [dotfiles](https://github.com/Allaman/dotfiles) and my [ansible role](https://github.com/Allaman/ansible-role-dotfiles)
 
