@@ -45,11 +45,11 @@
     repo: https://github.com/zsh-users/zsh-autosuggestions
     dest: ~/.shell/zsh-autosuggestions
 
-- name: Install zsh-syntax-highlighting
+- name: Install Fast Syntax Highlighting
   git:
     clone: true
-    repo: https://github.com/zsh-users/zsh-syntax-highlighting
-    dest: ~/.shell/zsh-syntax-highlighting
+    repo: https://github.com/zdharma/fast-syntax-highlighting
+    dest: ~/.shell/fast-syntax-Highlighting
 
 - name: Install zsh-history-substring-search
   git:
