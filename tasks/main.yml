@@ -39,6 +39,12 @@
     repo: https://github.com/Aloxaf/fzf-tab
     dest: ~/.shell/fzf-tab
 
+- name: Install forgit
+  git:
+    clone: true
+    repo: https://github.com/wfxr/forgit.git
+    dest: ~/.shell/forgit
+
 - name: Install fzf-autosuggestions
   git:
     clone: true
