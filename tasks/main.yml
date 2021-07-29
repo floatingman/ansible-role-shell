@@ -67,7 +67,7 @@
   git:
     clone: true
     repo: https://github.com/bash-my-aws/bash-my-aws.git
-    dest: ~/.shell/bash-my-aws
+    dest: ~/.bash-my-aws # cannot be "installed" in other path
 
 - name: Install powerlevel10k
   git:
