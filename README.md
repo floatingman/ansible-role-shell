@@ -1,7 +1,6 @@
-ansible-role-shell
-=========
+# ansible-role-shell
 
-This roles configures my prefered settings for working with the shell on Linux based systems.
+This roles configures my preferred settings for working with the shell on Linux based systems.
 
 - Install kubectl-aliases
 - Install fzf
@@ -12,26 +11,25 @@ This roles configures my prefered settings for working with the shell on Linux b
 - Install zsh-completions
 - Install bash-my-aws
 - Install Powerlevel10k
-- Setup NeoVim
 - Install Tmux tpm
 
 This works best with my [dotfiles](https://github.com/Allaman/dotfiles) and my [ansible role](https://github.com/Allaman/ansible-role-dotfiles)
 
-Requirements
-------------
+## Test
 
-Role Variables
---------------
+Run `molecule test` to test this role via Docker
+
+## Requirements
+
+## Role Variables
 
 No variables
 
-Dependencies
-------------
+## Dependencies
 
 - ansible-role-basic
 
-Example Playbook
-----------------
+## Example Playbook
 
 ```
 ---
@@ -42,7 +40,6 @@ Example Playbook
     - ansible-role-shell
 ```
 
-License
--------
+## License
 
 MIT
