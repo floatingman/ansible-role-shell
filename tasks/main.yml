@@ -74,3 +74,9 @@
     clone: true
     repo: https://github.com/romkatv/powerlevel10k.git
     dest: ~/.shell/powerlevel10k
+
+- name: Clone NeoVim config
+  git:
+    clone: true
+    repo: https://github.com/allaman/nvim.git
+    dest: ~/.config/nvim
