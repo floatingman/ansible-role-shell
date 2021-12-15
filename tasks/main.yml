@@ -48,7 +48,7 @@
 - name: Install Fast Syntax Highlighting
   git:
     clone: true
-    repo: https://github.com/zdharma/fast-syntax-highlighting
+    repo: https://github.com/zdharma-continuum/fast-syntax-highlighting
     dest: ~/.shell/fast-syntax-Highlighting
 
 - name: Install zsh-history-substring-search
