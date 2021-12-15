@@ -27,7 +27,7 @@ No variables
 
 ## Dependencies
 
-- ansible-role-basic
+N/A
 
 ## Example Playbook
 

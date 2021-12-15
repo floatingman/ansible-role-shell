@@ -1,5 +1,0 @@
----
-- name: Prepare
-  hosts: all
-  roles:
-    - ansible-role-basic

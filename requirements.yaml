@@ -1,4 +1,0 @@
-- name: ansible-role-basic
-  src: https://github.com/Allaman/ansible-role-basic.git
-  scm: git
-  version: master
