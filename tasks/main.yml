@@ -69,6 +69,18 @@
     repo: https://github.com/bash-my-aws/bash-my-aws.git
     dest: ~/.bash-my-aws # cannot be "installed" in other path
 
+- name: Install ranger devicons
+  git:
+    clone: true
+    repo: https://github.com/alexanderjeurissen/ranger_devicons.git
+    dest: ~/.config/ranger/plugins/ranger_devicons
+
+- name: Install ranger archives viewer
+  git:
+    clone: true
+    repo: https://github.com/maximtrp/ranger-archives.git
+    dest: ~/.config/ranger/plugins/ranger-archives
+
 - name: Install powerlevel10k
   git:
     clone: true
@@ -80,3 +92,21 @@
     clone: true
     repo: https://github.com/floatingman/neovim.git
     dest: ~/.config/nvim
+
+- name: Clone Emacs config
+  git:
+    clone: true
+    repo: https://github.com/floatingman/systemcrafteremacs.git
+    dest: ~/.emacs.d
+
+- name: Install mpv sockets plugin
+  git:
+    clone: true
+    repo: https://github.com/wis/mpvSockets.git
+    dest: ~/.config/mpv/scripts/mpvSockets
+
+- name: Install mpv-reload script
+  git:
+    clone: true
+    repo: https://github.com/4e6/mpv-reload
+    dest: ~/.config/mpv/scripts/mpv-reload
