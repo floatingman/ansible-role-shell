@@ -78,5 +78,5 @@
 - name: Clone NeoVim config
   git:
     clone: true
-    repo: https://github.com/allaman/nvim.git
+    repo: https://github.com/floatingman/neovim.git
     dest: ~/.config/nvim
