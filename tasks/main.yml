@@ -90,13 +90,13 @@
 - name: Clone NeoVim config
   git:
     clone: true
-    repo: https://github.com/floatingman/neovim.git
+    repo: git@github.com:floatingman/neovim.git
     dest: ~/.config/nvim
 
 - name: Clone Emacs config
   git:
     clone: true
-    repo: https://github.com/floatingman/systemcrafteremacs.git
+    repo: git@github.com:floatingman/systemcrafteremacs.git
     dest: ~/.emacs.d
 
 - name: Install mpv sockets plugin
