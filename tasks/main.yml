@@ -81,6 +81,12 @@
     repo: https://github.com/maximtrp/ranger-archives.git
     dest: ~/.config/ranger/plugins/ranger-archives
 
+- name: Install ranger zoxide plugin
+  git:
+    clone: true
+    repo: https://github.com/jchook/ranger-zoxide.git
+    dest: ~/.config/ranger/plugins/zoxide
+
 - name: Install powerlevel10k
   git:
     clone: true
