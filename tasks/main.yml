@@ -16,30 +16,13 @@
     url: https://raw.githubusercontent.com/ahmetb/kubectl-alias/master/.kubectl_aliases
     dest: ~/.shell/kubectl_aliases
 
-- name: Download fzf
-  git:
-    clone: true
-    repo: https://github.com/junegunn/fzf.git
-    dest: ~/.fzf
-
-- name: Install fzf
-  command: ./install
-  args:
-    chdir: ~/.fzf
-
-- name: Install fzf-tab
-  git:
-    clone: true
-    repo: https://github.com/Aloxaf/fzf-tab
-    dest: ~/.shell/fzf-tab
-
 - name: Install forgit
   git:
     clone: true
     repo: https://github.com/wfxr/forgit.git
     dest: ~/.shell/forgit
 
-- name: Install fzf-autosuggestions
+- name: Install zsh-autosuggestions
   git:
     clone: true
     repo: https://github.com/zsh-users/zsh-autosuggestions
